@@ -1,0 +1,19 @@
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+textarea{
+    width: 100%;
+}
+.btn-submit{
+    float: right;
+}
+.btn-review{
+    float: right;
+    position: relative;
+    left: -20px
+}
+.btn-add{
+    float: right;
+    position: relative;
+    left: -40px
+}
