@@ -62,11 +62,6 @@ return [
             'bucket' => 'your-bucket',
         ],
 
-        'uploadHtml' => [
-            'driver' => 'local',
-            'root' => storage_path('app/uploadHtml'),
-        ]
-
     ],
 
 ];
