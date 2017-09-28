@@ -174,6 +174,14 @@ namespace App{
 
 namespace App{
 /**
+ * App\Activity
+ *
+ */
+	class Activity extends \Eloquent {}
+}
+
+namespace App{
+/**
  * App\CompetitionMember
  *
  * @property int $id
