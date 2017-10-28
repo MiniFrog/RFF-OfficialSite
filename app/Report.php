@@ -6,11 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Report extends Model
 {
-    protected $table ='reports';
+    //protected $table ='reports';
+    protected $table ='report';
 
     protected $dateFormat = 'U';
 
-    protected $fillable = ['title', 'abstract'];
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     public function comReport()
     {

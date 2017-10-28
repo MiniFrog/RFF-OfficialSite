@@ -10,6 +10,28 @@
 
 namespace App{
 /**
+ * App\CarouselFigure
+ *
+ * @property int $id
+ * @property string $imgpath
+ * @property string $imgmes 图片信息
+ * @property string $imgtype 图片类型
+ * @property string $acturl 跳转链接
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @method static \Illuminate\Database\Query\Builder|\App\CarouselFigure whereActurl($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\CarouselFigure whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\CarouselFigure whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\CarouselFigure whereImgmes($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\CarouselFigure whereImgpath($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\CarouselFigure whereImgtype($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\CarouselFigure whereUpdatedAt($value)
+ */
+	class CarouselFigure extends \Eloquent {}
+}
+
+namespace App{
+/**
  * App\CompetitionTeam
  *
  * @property int $id
@@ -69,6 +91,28 @@ namespace App{
 
 namespace App{
 /**
+ * App\Director
+ *
+ * @property int $id
+ * @property string $position 职位
+ * @property string $name 姓名
+ * @property string $wish 协会寄语
+ * @property string $imgpath 图片位置
+ * @property string $created_at
+ * @property string $updated_at
+ * @method static \Illuminate\Database\Query\Builder|\App\Director whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Director whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Director whereImgpath($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Director whereName($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Director wherePosition($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Director whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Director whereWish($value)
+ */
+	class Director extends \Eloquent {}
+}
+
+namespace App{
+/**
  * App\FeedbackResponse
  *
  * @property int $id
@@ -88,6 +132,30 @@ namespace App{
  * @method static \Illuminate\Database\Query\Builder|\App\FeedbackResponse whereUserId($value)
  */
 	class FeedbackResponse extends \Eloquent {}
+}
+
+namespace App{
+/**
+ * App\Department
+ *
+ * @property int $id
+ * @property string $dpt 部门名称
+ * @property string $intro 部门介绍
+ * @property string $imgpathf 图片1
+ * @property string $imgpaths 图片2
+ * @property string $imgpatht 图片3
+ * @property string $created_at
+ * @property string $updated_at
+ * @method static \Illuminate\Database\Query\Builder|\App\Department whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Department whereDpt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Department whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Department whereImgpathf($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Department whereImgpaths($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Department whereImgpatht($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Department whereIntro($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Department whereUpdatedAt($value)
+ */
+	class Department extends \Eloquent {}
 }
 
 namespace App{
@@ -138,7 +206,21 @@ namespace App{
 /**
  * App\Report
  *
+ * @property int $id
+ * @property string $title 标题
+ * @property string $abstract 简介
+ * @property string $imgpath
+ * @property int $status
+ * @property \Carbon\Carbon $created_at 创建时间戳
+ * @property \Carbon\Carbon $updated_at 更新时间戳
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\ComReport[] $comReport
+ * @method static \Illuminate\Database\Query\Builder|\App\Report whereAbstract($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Report whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Report whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Report whereImgpath($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Report whereStatus($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Report whereTitle($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Report whereUpdatedAt($value)
  */
 	class Report extends \Eloquent {}
 }
@@ -147,8 +229,42 @@ namespace App{
 /**
  * App\Work
  *
+ * @property int $id
+ * @property string $title 标题
+ * @property string $abstract 简介
+ * @property string $imgpath
+ * @property \Carbon\Carbon $created_at 创建时间戳
+ * @property \Carbon\Carbon $updated_at 更新时间戳
+ * @method static \Illuminate\Database\Query\Builder|\App\Work whereAbstract($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Work whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Work whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Work whereImgpath($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Work whereTitle($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Work whereUpdatedAt($value)
  */
 	class Work extends \Eloquent {}
+}
+
+namespace App{
+/**
+ * App\Association
+ *
+ * @property int $id
+ * @property string $intro 协会简介
+ * @property string $introimgpath 协会简介图片
+ * @property string $activity 品牌活动
+ * @property string $actimgpathf 活动图片1
+ * @property string $actimgpaths 活动图片2
+ * @property int $update_time 更改记录的时间戳
+ * @method static \Illuminate\Database\Query\Builder|\App\Association whereActimgpathf($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Association whereActimgpaths($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Association whereActivity($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Association whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Association whereIntro($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Association whereIntroimgpath($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Association whereUpdateTime($value)
+ */
+	class Association extends \Eloquent {}
 }
 
 namespace App{
@@ -176,8 +292,68 @@ namespace App{
 /**
  * App\Activity
  *
+ * @property int $id
+ * @property string $title 活动标题
+ * @property string $abstract 活动的简介
+ * @property string $schedule 活动的时间表，进行php序列化储存
+ * @property string $way
+ * @property string $poster
+ * @property int $status
+ * @method static \Illuminate\Database\Query\Builder|\App\Activity whereAbstract($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Activity whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Activity wherePoster($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Activity whereSchedule($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Activity whereStatus($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Activity whereTitle($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Activity whereWay($value)
  */
 	class Activity extends \Eloquent {}
+}
+
+namespace App{
+/**
+ * App\TechGroup
+ *
+ * @property int $id
+ * @property string $group 小组名称
+ * @property string $intro 小组介绍
+ * @property string $imgpathf 图片1
+ * @property string $imgpaths 图片2
+ * @property string $imgpatht 图片3
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @method static \Illuminate\Database\Query\Builder|\App\TechGroup whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\TechGroup whereGroup($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\TechGroup whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\TechGroup whereImgpathf($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\TechGroup whereImgpaths($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\TechGroup whereImgpatht($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\TechGroup whereIntro($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\TechGroup whereUpdatedAt($value)
+ */
+	class TechGroup extends \Eloquent {}
+}
+
+namespace App{
+/**
+ * App\Dynamic
+ *
+ * @property int $id
+ * @property string $imgpath
+ * @property string $title 标题
+ * @property string $summary 摘要
+ * @property string $acturl 跳转链接
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @method static \Illuminate\Database\Query\Builder|\App\Dynamic whereActurl($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Dynamic whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Dynamic whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Dynamic whereImgpath($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Dynamic whereSummary($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Dynamic whereTitle($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Dynamic whereUpdatedAt($value)
+ */
+	class Dynamic extends \Eloquent {}
 }
 
 namespace App{
