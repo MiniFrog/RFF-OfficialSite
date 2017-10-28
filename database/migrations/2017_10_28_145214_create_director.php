@@ -12,7 +12,7 @@ class CreateDirector extends Migration
      */
     public function up()
     {
-        Schema::create('director', function (Blueprint $table) {
+        Schema::create('directors', function (Blueprint $table) {
             $table->comment = '协会理事';
             $table->increments('id');
             $table->char('position', 10)->comment('职位');
@@ -30,6 +30,6 @@ class CreateDirector extends Migration
      */
     public function down()
     {
-        Schema::drop('director');
+        Schema::drop('directors');
     }
 }

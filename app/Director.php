@@ -6,9 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Director extends Model
 {
-    //
-    protected $table = 'wxls';
-    //protected $table = 'directors';
+    protected $table = 'directors';
 
     public $timestamps = true;
 

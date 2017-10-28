@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Association extends Model
 {
-    protected $table = 'wxmes';
-    //protected $table = 'association';
+    protected $table = 'association';
 
     public $timestamps = false;
 

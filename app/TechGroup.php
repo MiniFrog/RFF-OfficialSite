@@ -8,8 +8,7 @@ class TechGroup extends Model
 {
     protected $guarded = ['id'];
 
-    protected $table = 'wxtec';
-    //protected $table = 'tech_group';
+    protected $table = 'tech_group';
 
     public $timestamps = true;
 
