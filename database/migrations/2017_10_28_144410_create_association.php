@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWxmesTable extends Migration
+class CreateAssociation extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,9 @@ class CreateWxmesTable extends Migration
      */
     public function up()
     {
-        Schema::create('wxmes', function (Blueprint $table) {
+        Schema::create('association', function (Blueprint $table) {
             $table->comment = '关于无协';
             $table->increments('id');
-
             $table->text('intro', 200)->comment('协会简介');
             $table->char('introimgpath', 50)->comment('协会简介图片');
             $table->text('activity', 200)->comment('品牌活动');
@@ -32,6 +31,6 @@ class CreateWxmesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('wxmes');
+        Schema::drop('association');
     }
 }
