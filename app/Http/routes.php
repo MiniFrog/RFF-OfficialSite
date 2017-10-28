@@ -94,8 +94,18 @@ Route::group(['prefix' => 'admin', 'middleware' => ['adminAuth']], function () {
 
 });
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/design',function(){
+    return view('design');
 });
 
-Route::post('/', 'Competition@register');
+Route::post('/designs','Designcon@submit');
+
+Route::get('/designquery',function(){
+    return view('designquery',['attributes'=>['a'=>'2']]);
+});
+
+Route::post('/designqueryhandle','Designquery@designquery');
+
+Route::post('/designalter','DesignAlter@designAlter');
+
+Route::post('/designalterhandle','DesignAlter@designAlterHandle');
