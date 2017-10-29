@@ -19,6 +19,7 @@ class CreateAdmin extends Migration
             $table->char('nickname', 32)->comment('管理员昵称');
             $table->tinyInteger('authority', false, false)->default(0);
         });
+
     }
 
     /**

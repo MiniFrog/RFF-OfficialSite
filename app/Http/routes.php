@@ -12,6 +12,7 @@
 */
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 Route::group(['prefix' => 'api'], function () {
     Route::get('activity/active', 'ActivityController@active');
@@ -38,6 +39,11 @@ Route::group(['prefix' => 'api'], function () {
         Route::get('list', 'Reply@getReply');
         Route::post('send', 'Reply@postReply');
     })*/
+});
+
+Route::get('public/{img}', function($imageName) {
+    $image = Storage::disk('public')->get($imageName);
+    return response($image);
 });
 
 Route::get('admin/login', 'AdminController@index');

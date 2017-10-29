@@ -5,6 +5,7 @@
 </head>
 <body>
 <form action="http://scutrfa.com/designalterhandle" method="POST">
+	{{ csrf_field() }}
 	<input type="hidden" name="original_teamname" value="{{$attributes['teamming'] or '2'}}">
 	<input type="text" name="teamming" value="{{$attributes['teamming'] or '2'}}">
 	<input type="text" name="havehuiyuan" value="{{$attributes['havehuiyuan'] or '2'}}">
