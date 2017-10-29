@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTechGroup extends Migration
+class CreateTechGroups extends Migration
 {
     /**
      * Run the migrations.
