@@ -21,6 +21,7 @@ class CreateDynamicsTable extends Migration
             $table->char('acturl', 30)->comment('跳转链接');
             $table->timestamps();
         });
+
     }
 
     /**

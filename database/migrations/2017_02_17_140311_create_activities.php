@@ -4,7 +4,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\Schema;
 
-class CreateActivity extends Migration
+class CreateActivities extends Migration
 {
     /**
      * Run the migrations.
@@ -22,7 +22,7 @@ class CreateActivity extends Migration
             $table->text('way')->comment('报名方式，json');
             $table->text('waycontent')->comment('具体方式');
             $table->string('poster', 50)->default(null);
-            $table->integer('stage')->comment('活动状态，1表示正在进行，0表示未开始，2表示结束');
+            $table->integer('status')->comment('活动状态，1表示正在进行，0表示未开始，2表示结束');
         });
     }
 

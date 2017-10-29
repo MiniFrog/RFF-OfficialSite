@@ -132,7 +132,7 @@ class ArticleController extends Controller
             $data
         );
         $file_name = $report->id. '.txt';
-        Storage::disk('reports')->put($file_name, array_get($data, 'content', ''));
+        Storage::disk('reports')->put($file_name, $content);
         return redirect('admin/dynamic/report');
     }
 

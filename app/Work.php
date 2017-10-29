@@ -11,5 +11,5 @@ class Work extends Model
 
     protected $dateFormat = 'U';
 
-    protected $fillable = ['title', 'abstract'];
+    protected $fillable = ['title', 'abstract', 'imgpath'];
 }

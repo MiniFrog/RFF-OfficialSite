@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class CreateCarouselTable extends Migration
 {
@@ -21,6 +22,14 @@ class CreateCarouselTable extends Migration
             $table->char('acturl', 30)->comment('跳转链接');
             $table->timestamps();
         });
+        for ($i = 0; $i < 5; $i++) {
+            DB::table('carousel')->insert([
+                'imgpath' => '',
+                'imgmes' => '',
+                'imgtype' => '',
+                'acturl' => ''
+            ]);
+        }
     }
 
     /**

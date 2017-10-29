@@ -5,7 +5,7 @@
  * Date: 2017/8/9
  * Time: 23:50
  */
-namespace App\Http\Controllers\common;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;

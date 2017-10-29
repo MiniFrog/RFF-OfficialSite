@@ -23,7 +23,7 @@ function uploadfile(thisfile){
 
     var upload = function(){
         $.ajax({
-            url : './admin/upload',
+            url : 'http://localhost/scutRfa/public/admin/upload',
             type : 'POST',
             data : this.formdata,
             cache : false,

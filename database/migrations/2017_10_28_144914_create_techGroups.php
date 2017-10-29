@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDepartment extends Migration
+class CreateTechGroup extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,10 @@ class CreateDepartment extends Migration
      */
     public function up()
     {
-        Schema::create('department', function (Blueprint $table) {
-            $table->comment = '部门介绍';
+        Schema::create('tech_groups', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('dpt', 5)->comment('部门名称');
-            $table->text('intro')->comment('部门介绍');
+            $table->char('group', 10)->comment('小组名称');
+            $table->text('intro')->comment('小组介绍');
             $table->char('imgpathf')->comment('图片1');
             $table->char('imgpaths')->comment('图片2');
             $table->char('imgpatht')->comment('图片3');
@@ -31,6 +30,6 @@ class CreateDepartment extends Migration
      */
     public function down()
     {
-        Schema::drop('department');
+        Schema::drop('tech_group');
     }
 }
