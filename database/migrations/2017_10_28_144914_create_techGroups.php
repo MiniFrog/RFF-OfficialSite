@@ -30,6 +30,6 @@ class CreateTechGroups extends Migration
      */
     public function down()
     {
-        Schema::drop('tech_group');
+        Schema::drop('tech_groups');
     }
 }
