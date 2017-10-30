@@ -42,7 +42,7 @@ class IntroductionController extends Controller
     public function director()
     {
         $directors = Director::all(['id', 'position', 'name', 'wish', 'imgpath'])->toArray();
-        return response()->json([$directors], 200, [], JSON_UNESCAPED_UNICODE);
+        return response()->json($directors, 200, [], JSON_UNESCAPED_UNICODE);
     }
 
     public function department()
