@@ -41,11 +41,6 @@ Route::group(['prefix' => 'api'], function () {
     })*/
 });
 
-Route::get('public/{img}', function($imageName) {
-    $image = Storage::disk('public')->get($imageName);
-    return response($image);
-});
-
 Route::get('admin/login', 'AdminController@index');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['adminAuth']], function () {
