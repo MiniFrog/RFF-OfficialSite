@@ -41,6 +41,10 @@ Route::group(['prefix' => 'api'], function () {
     })*/
 });
 
+Route::get('/', function () {
+    return view('home');
+});
+
 Route::get('admin/login', 'AdminController@index');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['adminAuth']], function () {
